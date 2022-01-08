@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [github](https://github.com/efs0-cod3/base-apparel-coming-soon-master/blob/main/README.md)
 - Live Site URL: [base-apparel](https://efs0-cod3.github.io/base-apparel-coming-soon-master/)
 
 ## My process
