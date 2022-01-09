@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -19,6 +19,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      position: relative;
     }
 
     .attribution a {
@@ -30,36 +31,37 @@
 <body>
   <main>
     <div class="container">
-      <section class="left__side">
-        <header class="left__side-page__header">
-          <img class="page__header-logo" src="/images/logo.svg" alt="">
-        </header>
+      <section class="content">
+        <div class="img__side">
+          <img class="img-desktop" src="/images/hero-desktop.jpg" alt="">
+          <img class="img-mobile" src="/images/hero-mobile.jpg" alt="">
+        </div>
 
-        <div class="left__side-description">
-          <h1 class="left__side-description__title"><span class="description__title-span">We're</span> <br>coming <br>
+        <img class="content__page-logo" src="images/logo.svg" alt="">
+
+        <div class="content__description">
+          <h1 class="content__description-title"><span>We're</span><br>coming<br>
             soon</h1>
 
-          <p class="left__side-description__greet">
+          <p class="content-description__greet">
             Hello fellow shoppers! We're currently building our new fashion store.
             Add your email below to stay up-to-date with announcements and our launch deals.
           </p>
+          <div class="content__form">
+            <input class="content__form-email" type="text" name="" id="" placeholder="Email address">
+            <img class="error" src="images/icon-error.svg" alt="">
+            <button class="content__form-btn"><img src="images/icon-arrow.svg" alt=""></button>
+          </div>
+          <p class="content__form-error__message">
+            Please provide a valid email
+          </p>
+          <p class="content__form-thanks__message">
+            Thank you for joining our community!
+          </p>
         </div>
-        <div class="left__side-form">
-          <input class="left__side-form--email" type="text" name="" id="" placeholder="Email address">
-         <img  class="error" src="/images/icon-error.svg" alt="">
-          <button class="form-btn"><img src="/images/icon-arrow.svg" alt=""></button>
-        </div>
-        <p class="left__side-form__error-message">
-          Please provide a valid email
-        </p>
-        <p class="left__side-form__thanks-message">
-          Thank you for joining our community!
-        </p>
       </section>
-
-      <div class="right__side"></div>
+    </div>
   </main>
-  </div>
 
   <footer>
     <p class="attribution">
@@ -67,7 +69,7 @@
       Coded by <a href="#">Erick "efs0" Felix</a>.
     </p>
   </footer>
-<script src="js/app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
