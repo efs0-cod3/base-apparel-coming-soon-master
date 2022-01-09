@@ -192,7 +192,7 @@
         color: hsl(0, 6%, 24%);
         letter-spacing: 10px;
         margin-bottom: 18px;
-        line-height: 1.2;
+        line-height: 1;
     }
 
     .content__description-title span {
@@ -204,7 +204,7 @@
         padding: 0 210px 0 165px;
         text-align: left;
         font-size: 18px;
-        font-weight: 300;
+        font-weight: 500;
         line-height: 1.5;
         color: hsl(0, 36%, 70%);
     }
