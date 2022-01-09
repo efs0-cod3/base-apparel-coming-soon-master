@@ -1,41 +1,44 @@
-let formInput = document.getElementsByClassName('left__side-form--email')[0];
-let formBtn = document.getElementsByClassName('form-btn')[0];
+let formInput = document.getElementsByClassName('content__form-email')[0];
+let formBtn = document.getElementsByClassName('content__form-btn')[0];
+let contetnThanksMsg = document.getElementsByClassName('content__form-thanks__message')[0];
+let contentErrorMsg = document.getElementsByClassName('content__form-error__message')[0];
+let formBorder = document.getElementsByClassName('content__form')[0];
+let error = document.getElementsByClassName('error')[0];
 
 function emailIsValid(email) {
     return /\S+@\S+\.\S+/.test(email);
 }
 
-let removeThanks = () =>  {
-    document.getElementsByClassName('left__side-form__thanks-message')[0].classList.remove('left__side-form__thanks-message__active');
+let removeThanks = () => {
+    contetnThanksMsg.classList.remove('content__form-thanks__message--active');
 }
 
-let removeError = () =>{
-document.getElementsByClassName('left__side-form__error-message')[0].classList.remove('left__side-form__error-message__active');
-formInput.classList.remove('left__side-form--email__border')
-document.getElementsByClassName('error')[0].classList.remove('error--active')
+let removeError = () => {
+    contentErrorMsg.classList.remove('content__form-error__message--active');
+    formBorder.classList.remove('content__form--border')
+    error.classList.remove('error--active')
 }
 
 let addThanks = () => {
-    document.getElementsByClassName('left__side-form__thanks-message')[0].classList.add('left__side-form__thanks-message__active');
+    contetnThanksMsg.classList.add('content__form-thanks__message--active');
     setTimeout(() => {
         removeThanks();
     }, 2000);
-    
+
 }
 
 let addError = () => {
-    document.getElementsByClassName('left__side-form__error-message')[0].classList.add('left__side-form__error-message__active');
-    formInput.classList.add('left__side-form--email__border')
-    document.getElementsByClassName('error')[0].classList.add('error--active')
+    contentErrorMsg.classList.add('content__form-error__message--active');
+    formBorder.classList.add('content__form--border')
+    error.classList.add('error--active')
     setTimeout(() => {
         removeError();
     }, 2000);
 }
 
- 
 
-let timeOut = () => {
-}
+
+let timeOut = () => {}
 
 formBtn.addEventListener('click', () => {
     if (emailIsValid(formInput.value)) {
@@ -46,4 +49,3 @@ formBtn.addEventListener('click', () => {
 
     }
 })
-
