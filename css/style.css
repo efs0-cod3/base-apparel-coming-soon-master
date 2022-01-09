@@ -253,6 +253,11 @@
 
 
     /* alerts */
+    
+    .content__form--border {
+        border: solid 1px hsl(0, 93%, 68%);
+    }
+    
     .content__form-error__message {
         padding-left: 185px;
         position: absolute;
