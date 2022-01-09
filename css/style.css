@@ -158,7 +158,7 @@
             "logo foto"
             "details foto";
         height: 800px;
-        background: url(/images/bg-pattern-desktop.svg);
+        background: url(images/bg-pattern-desktop.svg);
     }
 
     .content__page-logo {
