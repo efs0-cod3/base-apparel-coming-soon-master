@@ -1,41 +1,45 @@
-@media screen and (max-width:699px) {
-    
+/* main {} */
+
 
 .container {
-    max-width: 375px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 375px;
+    height: 800px;
+}
+
+.content {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    display: grid;
+    grid-template-areas:
+        "logo"
+        "foto"
+        "details";
+    grid-template-columns: 1fr;
+}
+
+.content__page-logo {
+    padding-left: 30px;
+    grid-area: logo;
+    margin-bottom: 20px;
 }
 
 /* img */
-.right__side {
-    background: url(/images/hero-mobile.jpg) center;
-    background-size: cover;
+.img__side {
+    background: url(/images/hero-mobile.jpg);
     width: 375px;
     height: 250px;
-    position: absolute;
-    top: 92px;
-} 
-
-.left__side {
-    padding: 30px 32px;
-    color: hsl(0, 36%, 70%);
-    
+    background-size: cover;
+    grid-area: foto;
 }
 
-.left__side-description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.content__description {
+    padding: 30px;
     text-align: center;
-    margin-top: 20rem;
-    margin-bottom: 50px;
+    grid-area: details;
+
 }
 
-
-.left__side-description__title {
+.content__description-title {
     font-size: 2rem;
     text-transform: uppercase;
     color: hsl(0, 6%, 24%);
@@ -44,63 +48,67 @@
     line-height: 1.2;
 }
 
-.description__title-span {
+.content__description-title span {
     font-weight: 300;
     color: hsl(0, 36%, 70%);
 }
 
-.left__side-description__greet {
+.content-description__greet {
     font-size: 15px;
     font-weight: 300;
     line-height: 1.5;
-}
-
-.left__side-form{
-    display: flex;
-    margin-bottom: .5rem;
-}
-
-.left__side-form--email {
-    width: 100%;
-    padding: 15px 0 15px 30px;
-    border-radius: 50px;
-    border: 1px solid hsl(0, 36%, 70%);
-    display: flex;
-}
-
-.left__side-form--email:focus{
-    outline: none;
-}
-
-.left__side-form--email::placeholder {
-    
     color: hsl(0, 36%, 70%);
 }
 
-.left__side-form--email__border{
-    border: solid 1px hsl(0, 93%, 68%);
+/* Form */
+.content__form {
+    margin-top: 1.4rem;
+    display: flex;
+    margin-bottom: .5rem;
+    border: 1px solid hsl(0, 36%, 70%);
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 50px;
 }
 
-button {
+.content__form-email {
+    border-radius: 50px;
+    width: 100%;
+    border: none;
+    padding-left: 20px;
+}
+
+.content__form-email:focus {
+    outline: none;
+}
+
+.content__form-email::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+/* Form button */
+.content__form-btn {
     cursor: pointer;
-position: absolute;
-left: 252px;
-    padding: 12.5px 40px;
+    padding: 10px 30px;
     border-radius: 50px;
     border: none;
     background: Linear-gradient(135deg, hsl(0, 80%, 86%)0%, hsl(0, 74%, 74%)100%);
 }
 
-button:hover {
+.content__form-btn:hover {
     box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.511);
     background: Linear-gradient(135deg, hsl(0, 100%, 92%)0%, hsl(0, 38%, 82%)100%);
 }
 
+/* Form */
+
 /* alerts */
-.error{
-    position:absolute;
-    right: 132px;
-    bottom: 115px;
+.error {
+    width: 24px;
+    height: 24px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
     display: none;
 }
 
@@ -108,185 +116,145 @@ button:hover {
     display: block;
 }
 
-.left__side-form--email__border{
+.content__form--border {
     border: solid 1px hsl(0, 93%, 68%);
 }
 
-.left__side-form__error-message{
+.content__form-error__message {
     text-align: center;
     color: hsl(0, 93%, 68%);
     display: none;
 }
 
-.left__side-form__error-message__active{
+.content__form-error__message--active {
     display: block;
 }
 
-.left__side-form__thanks-message{
+.content__form-thanks__message {
     text-align: center;
     color: hsl(0, 93%, 68%);
     display: none;
 }
 
-.left__side-form__thanks-message__active{
-    display:block;
+.content__form-thanks__message--active {
+    display: block;
 }
 
 
 /* alerts */
 
-
-}
-@media only screen and (min-width:700px) {
+@media screen and (min-width:500px) {
     .container {
-        max-width: 1440px;
+        width: 1280px;
         height: 800px;
-        display: flex;
-
     }
 
-    .left__side {
-        padding: 64px 218px 0 165px;
-        display: flex;
-        flex-direction: column;
-        align-items:left;
-        width: 830px;
+    .content {
+        padding-top: 0;
+        padding-bottom: 0;
+        display: grid;
+        grid-template-areas:
+            "logo foto"
+            "details foto";
         height: 800px;
         background: url(/images/bg-pattern-desktop.svg);
     }
 
-    .left__side-page__header {
-        margin-bottom: 60px;
+    .content__page-logo {
+        padding: 66px 0 0 80px;
+        margin-bottom: 0;
     }
 
-    .left__side-description__title {
+    .img__side {
+        background: url(/images/hero-desktop.jpg);
+        height: 800px;
+        width: 610px;
+        grid-area: foto;
+    }
+
+    .content__description {
+        width: 682px;
+        padding: 0 0 80px 0;
+        grid-area: details;
+        height: fit-content;
+    }
+
+    .content__description-title {
+        padding: 0 218px 0 80px;
+        text-align: left;
         font-size: 4rem;
         text-transform: uppercase;
         color: hsl(0, 6%, 24%);
-        letter-spacing: 25px;
-        margin-bottom: 42px;
+        letter-spacing: 10px;
+        margin-bottom: 18px;
         line-height: 1.2;
     }
 
-    .description__title-span {
+    .content__description-title span {
         font-weight: 300;
         color: hsl(0, 36%, 70%);
     }
 
-    .left__side-description__greet {
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 2;
+    .content-description__greet {
+        padding: 0 150px 0 80px;
+        text-align: left;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.5;
         color: hsl(0, 36%, 70%);
-        margin-bottom: 50px;
     }
 
-
-    .left__side-form{
-        width: 100%;
-        display: flex;
-        margin-bottom: .8rem;
-    }
-
-    .left__side-form--email {
-        outline: none;
-        width: 100%;
-        padding: 15px 0 15px 30px;
-        border-radius: 50px;
+    /* Form */
+    .content__form {
+        margin-top: 3rem;
+        margin-bottom: .5rem;
         border: 1px solid hsl(0, 36%, 70%);
-        color: hsl(0, 36%, 70%);
+        margin-left: 80px;
+        margin-right: 140px;
+        border-radius: 50px;
+        width: 481px;
     }
-    /* doesnt show the focus state of the input element */
-    .left__side-form--email:focus {
+
+    .content__form-email {
+        border-radius: 50px;
+        border: none;
+        padding-left: 20px;
+    }
+
+    .content__form-email:focus {
         outline: none;
     }
 
-    .left__side-form--email::placeholder {
+    .content__form-email::placeholder {
         color: hsl(0, 36%, 70%);
     }
 
-    .left__side-form--email__border{
-        border: solid 1px hsl(0, 93%, 68%);
-    }
-
-    .left__side-form__error-message{
-        padding-left: 30px;
-        color: hsl(0, 93%, 68%);
-        display: none;
-    }
-
-    .left__side-form__error-message__active{
-        display: block;
-    }
-    
-    .left__side-form__thanks-message{
-        padding-left: 30px;
-        color: hsl(0, 93%, 68%);
-        display: none;
-    }
-
-    .left__side-form__thanks-message__active{
-        display:block;
-    }
-
-    button {
+    /* button */
+    .content__form-btn {
         cursor: pointer;
-        position: absolute;
-        left: 505px;
-        padding: 12.5px 40px;
+        padding: 10px 30px;
         border-radius: 50px;
         border: none;
         background: Linear-gradient(135deg, hsl(0, 80%, 86%)0%, hsl(0, 74%, 74%)100%);
     }
 
-    button:hover {
-        box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.511);
+    .content__form-btn:hover {
+        box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.511);
         background: Linear-gradient(135deg, hsl(0, 100%, 92%)0%, hsl(0, 38%, 82%)100%);
     }
+    /* Form */
+
 
     /* alerts */
-    .error{
-        position:absolute;
-        right: 770px;
-        top: 578px;
-        display: none;
-    }
-
-    .error--active {
-        display: block;
-    }
-
-    .left__side-form--email__border{
-        border: solid 1px hsl(0, 93%, 68%);
-    }
-
-    .left__side-form__error-message{
-        padding-left: 30px;
-        color: hsl(0, 93%, 68%);
-        display: none;
-    }
-
-    .left__side-form__error-message__active{
-        display: block;
+    .content__form-error__message {
+        padding-left: 100px;
+        position: absolute;
     }
     
-    .left__side-form__thanks-message{
-        padding-left: 30px;
-        color: hsl(0, 93%, 68%);
-        display: none;
-    }
-
-    .left__side-form__thanks-message__active{
-        display:block;
+    .content__form-thanks__message {
+        position: absolute;
+        padding-left: 100px;
     }
     /* alerts */
 
-    .right__side {
-        background: url(/images/hero-desktop.jpg);
-        width: 610px;
-        height: 800px;
-        position: relative;
-        top: 0;
-        right: 0;
-    }
 }
